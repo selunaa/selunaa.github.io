@@ -1,0 +1,12 @@
+@font-face {
+    font-family: SFPROREG;
+    src: url(fonts/SFPRODISPLAYREGULAR.otf);
+}
+@font-face {
+    font-family: SFPROMED;
+    src: url(fonts/SFPRODISPLAYMEDIUM.otf);
+}
+@font-face {
+    font-family: SFPROBOLD;
+    src: url(fonts/SFPRODISPLAYBOLD.otf);
+}
