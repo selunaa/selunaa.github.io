@@ -2,21 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     <title>SELUNA - Es Cendol Bunga Telang</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="fontconfig.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/icons/icon2.png" type="image/x-icon">
+    <style></style>
 </head>
 <body>
-    <!-- Website By hirochi.dev, pure HTML and CSS -->
+    <!-- Lightbox for Gallery -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightboxImage">
+            <div class="lightbox-nav">
+                <span class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></span>
+                <span class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></span>
+            </div>
+            <button class="lightbox-fullscreen" id="fullscreenBtn">Fullscreen</button>
+        </div>
+    </div>
+
     <!-- Header/Navigation -->
     <header>
         <nav>
             <a href="" class="logo">
                 <img src="images/icons/icon2.png" class="logo-x-logo-main" height="30" alt="SELUNA Logo">
-                <span>&nbsp;&nbsp;&nbsp; SELUNA</span>
+                <span> &nbsp;&nbsp;&nbsp; SELUNA</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -36,7 +48,6 @@
         <div class="hero-content fade-in">
             <h1>Seluna - Es Cendol Bunga Telang</h1>
             <p>"Rasakan kesegaran tradisional"</p>
-            <!--<a href="#production" class="cta-button">Lihat Lebih Lanjut</a>-->
         </div>
     </section>
 
@@ -57,11 +68,6 @@
                     memanfaatkan sumber daya alam yang ada di 
                     sekitar kami.
                 </p>
-                    <!--<ul>
-                    <li>Kaya akan antioksidan</li>
-                    <li>Membantu meningkatkan daya ingat</li>
-                    <li>Memberikan warna alami yang menakjubkan</li>
-                </ul>-->
             </div>
         </div>
 
@@ -71,27 +77,16 @@
             <div class="feature-content">
                 <span class="feature-tag">#Kenapa?</span>
                 <h2>Kenapa Pilih Seluna?</h2>
-                <!--<p>
-
-                </p>    -->
-                    <li>
-                        Minuman tradisional.
-                    </li>
-                    <li>
-                        Menggunakan pewarna bunga telang alami dan bukan pewarna buatan.
-                    </li>
-                    <li>
-                        Diproses dengan cara yang higienis.
-                    </li>
-                    <li>
-                        Memiliki khasiat yang menyehatkan tubuh.
-                    </li>
-                    <li>
-                        Warna bunga telang yang segar dan khas.
-                    </li>
+                <ul>
+                    <li>Minuman tradisional.</li>
+                    <li>Menggunakan pewarna bunga telang alami dan bukan pewarna buatan.</li>
+                    <li>Diproses dengan cara yang higienis.</li>
+                    <li>Memiliki khasiat yang menyehatkan tubuh.</li>
+                    <li>Warna bunga telang yang segar dan khas.</li>
                 </ul>
             </div>
         </div>
+        
         <!-- Banner 3 -->
         <div class="feature-banner fade-in delay-1">
             <div class="feature-image" style="background-image: url(images/abt/img2.jpg);"></div>
@@ -102,23 +97,12 @@
                     Berikut adalah fakta-fakta menarik tentang Bunga Telang yang jarang orang ketahui!
                </p>
                 <ul>
-                    <li>
-                        Asal usul nama "Telang" berasal dari bahasa Ternate, sebuah pulau di Maluku, Indonesia.
-
-                    </li>
-                    <li>
-                        Kaya akan antioksidan, termasuk flavonoid dan antosianin, yang membantu melindungi sel-sel 
-                        tubuh dari kerusakan akibat radikal bebas.
-                    </li>
-                    <li>
-                        Banyak manfaat kesehatan lain, seperti mencegah kerontokan rambut, merangsang pertumbuhan rambut,
-                         menurunkan berat badan, menjaga kesehatan kulit, dan bahkan membantu dalam masalah pencernaan.
-                    </li>
-                   
+                    <li>Asal usul nama "Telang" berasal dari bahasa Ternate, sebuah pulau di Maluku, Indonesia.</li>
+                    <li>Kaya akan antioksidan, termasuk flavonoid dan antosianin, yang membantu melindungi sel-sel tubuh dari kerusakan akibat radikal bebas.</li>
+                    <li>Banyak manfaat kesehatan lain, seperti mencegah kerontokan rambut, merangsang pertumbuhan rambut, menurunkan berat badan, menjaga kesehatan kulit, dan bahkan membantu dalam masalah pencernaan.</li>
                 </ul>
             </div>
         </div>
-       
     </section>
 
     <!-- Production Section -->
@@ -126,37 +110,49 @@
         <h2 class="section-title fade-in">Behind The Scenes</h2>
         <div class="gallery">
             <div class="gallery-item fade-in delay-1">
-                <img src="images/doc/presentation_3_11zon.jpg" class="responsive-img">
+                <div class="gallery-img-container">
+                    <img src="images/doc/presentation_3_11zon.jpg" class="responsive-img">
+                </div>
                 <div class="gallery-caption">
-                    <h3>Mempresentasikan produk ke seluruh Sekolah SBS </h3>
+                    <h3>Mempresentasikan produk ke seluruh Sekolah SBS</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in delay-2">
-                <img src="images/doc/wash_5_11zon.jpg" alt="Extracting Natural Color" class="responsive-img">
+                <div class="gallery-img-container">
+                    <img src="images/doc/wash_5_11zon.jpg" alt="Extracting Natural Color" class="responsive-img">
+                </div>
                 <div class="gallery-caption">
                     <h3>Mencuci daun pandan</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in delay-3">
-                <img src="images/doc/stir_4_11zon.jpg" alt="Making Cendol Noodles" class="responsive-img">
+                <div class="gallery-img-container">
+                    <img src="images/doc/stir_4_11zon.jpg" alt="Making Cendol Noodles" class="responsive-img">
+                </div>
                 <div class="gallery-caption">
                     <h3>Mengaduk adonan cendol</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in delay-1">
-                <img src="images/doc/blender_1_11zon.jpg" alt="Preparing Coconut Milk" class="responsive-img">
+                <div class="gallery-img-container">
+                    <img src="images/doc/blender_1_11zon.jpg" alt="Preparing Coconut Milk" class="responsive-img">
+                </div>
                 <div class="gallery-caption">
                     <h3>Memblender santan</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in delay-2">
-                <img src="images/doc/bungtel_11zon.jpg" alt="Mixing Ingredients" class="responsive-img">
+                <div class="gallery-img-container">
+                    <img src="images/doc/bungtel_11zon.jpg" alt="Mixing Ingredients" class="responsive-img">
+                </div>
                 <div class="gallery-caption">
                     <h3>Menyortir cendol</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in delay-3">
-                <img src="images/doc/packing_2_11zon.jpg" alt="Final Product" class="responsive-img">
+                <div class="gallery-img-container">
+                    <img src="images/doc/packing_2_11zon.jpg" alt="Final Product" class="responsive-img">
+                </div>
                 <div class="gallery-caption">
                     <h3>Mengemaskan minuman ke cup</h3>
                 </div>
@@ -172,68 +168,43 @@
                 <img src="images/members/alam.jpg" alt="ALAM" class="member-image responsive-img">
                 <h3 class="member-name">Alam</h3>
                 <span class="member-role">Ketua Kelompok</span>
-                <!--<p>Makes sure every customer has an exceptional experience.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>-->
             </div>
             <div class="team-member fade-in delay-1">
                 <img src="images/members/rafif.jpg" alt="RAFIF" class="member-image responsive-img">
                 <h3 class="member-name">Rafif</h3>
                 <span class="member-role">PJ Produksi</span>
-               <!-- <p>With 15 years in traditional desserts, Sarah brings passion to every recipe.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>-->
             </div>
             <div class="team-member fade-in delay-2">
                 <img src="images/members/salma.jpg" alt="SALMA" class="member-image responsive-img">
                 <h3 class="member-name">Salma</h3>
                 <span class="member-role">Bendahara & Sekertaris</span>
-                <!--<p>Master of traditional Indonesian desserts with innovative twists.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>-->
             </div>
             <div class="team-member fade-in delay-3">
                 <img src="images/members/jasmine.jpg" alt="JASMINE" class="member-image responsive-img">
                 <h3 class="member-name">Jasmine</h3>
                 <span class="member-role">Anggota</span>
-                <!--<p>Spreads the word about our delicious cendol to the world.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>-->
             </div>
             <div class="team-member fade-in delay-1">
                 <img src="images/members/kayyis.jpg" alt="KAYYIS" class="member-image responsive-img">
                 <h3 class="member-name">Kayyis</h3>
                 <span class="member-role">Anggota</span>
-                <!--<p>Ensures we only use the freshest, highest quality ingredients.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>-->
             </div>
-            
         </div>
     </section>
-        <!-- WhatsApp CTA Section -->
-        <section id="whatsapp-cta" class="whatsapp-cta">
-            <div class="whatsapp-content fade-in">
-                <h2>Tertarik?</h2>
-                <p>Silakan hubungi Salma di nomor WhatsApp ini:<br>
-                    Status Pre-Order: <span style="color:Lime;">BUKA</span> (Periode: 3-5 Mei 2025)
-                </p>
-                <a href="https://wa.me/6285814610755" target="_blank" class="whatsapp-banner">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>+62 0858-1461-0755 (Salma)</span>
-                </a>
-            </div>
-        </section>
+
+    <!-- WhatsApp CTA Section -->
+    <section id="whatsapp-cta" class="whatsapp-cta">
+        <div class="whatsapp-content fade-in">
+            <h2>Tertarik?</h2>
+            <p>Silakan hubungi Salma di nomor WhatsApp ini:<br>
+                Status Pre-Order: <span style="color:Lime;">BUKA</span> (Periode: 4-7 Mei 2025)
+            </p>
+            <a href="https://wa.me/6285814610755" target="_blank" class="whatsapp-banner">
+                <i class="fab fa-whatsapp"></i>
+                <span>+62 0858-1461-0755 (Salma)</span>
+            </a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contact">
@@ -246,12 +217,12 @@
                 <p>
                     &copy; 2025 SELUNA | 
                     All Rights Reserved. | 
-                    Page Version: 2025-05-03, Revision 16
+                    Page Version: 2025-05-05, Revision 20
                 </p>
-                <!--<p>Made with <i class="fas fa-heart" style="color: #dc2743;"></i> in Indonesia</p>-->
             </div>
         </div>
     </footer>
+
 
     <!-- Hamburger Script and More -->
     <script>
@@ -307,6 +278,109 @@
  }
  
  window.addEventListener('DOMContentLoaded', handleTouch);
+    // Lightbox functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        
+        let currentImageIndex = 0;
+        const images = Array.from(galleryItems).map(item => item.querySelector('img').src);
+        
+        // Open lightbox
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentImageIndex = index;
+                updateLightboxImage();
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Update lightbox image
+        function updateLightboxImage() {
+            lightboxImg.src = images[currentImageIndex];
+        }
+        
+        // Close lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            exitFullscreen();
+        });
+        
+        // Navigation
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateLightboxImage();
+        });
+        
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateLightboxImage();
+        });
+        
+        // Fullscreen functionality
+        fullscreenBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                lightbox.requestFullscreen().catch(err => {
+                    alert(`Fullscreen failed: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        });
+        
+        // Close lightbox when clicking outside
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                exitFullscreen();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                exitFullscreen();
+            } else if (e.key === 'ArrowLeft') {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                updateLightboxImage();
+            } else if (e.key === 'ArrowRight') {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                updateLightboxImage();
+            } else if (e.key === 'f' || e.key === 'F') {
+                if (!document.fullscreenElement) {
+                    lightbox.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            }
+        });
+        
+        // Exit fullscreen helper
+        function exitFullscreen() {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+        }
+        
+        // Fullscreen change event
+        document.addEventListener('fullscreenchange', () => {
+            fullscreenBtn.textContent = document.fullscreenElement ? 'Exit Fullscreen' : 'Fullscreen';
+        });
+    });
     </script>
 </body>
 </html>
