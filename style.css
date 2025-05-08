@@ -443,7 +443,7 @@
 
         /* Team Section */
         .team {
-            padding: 6rem 5%;
+            padding:6rem 5%;
             background-color: white;
         }
 
@@ -451,7 +451,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
             gap: 3rem;
-            max-width: 1400px;
+            max-width: 2000px;
             margin: 0 auto;
             padding: 0 5%;
         }
